@@ -1,9 +1,13 @@
-import express, { Router } from 'express';
+import express from 'express';
 import cors from 'cors';
+
+import routes from './routes';
 
 class App {
   constructor() {
-    this.app = express();
+    this.server = express();
+    this.middlewares();
+    this.routes();
   }
 
   middlewares() {
@@ -12,10 +16,8 @@ class App {
   }
 
   routes() {
-    const routes = new Router();
-
     this.server.use(routes);
   }
 }
 
-export default App().server;
+export default new App().server;

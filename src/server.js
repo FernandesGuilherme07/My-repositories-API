@@ -1,3 +1,8 @@
-import app from './app';
+import App from './app';
 
-app.listen(5000);
+const port = 5000;
+
+App.listen(port, () => {
+  console.log(`Servidor executando na porta: ${port}`);
+  console.log(`http://localhost:${port}`);
+});
