@@ -1,5 +1,5 @@
 import 'dotenv/config';
 
 export default {
-  url: process.env.DB_CONECTION,
+  url: process.env.DB_CONNECTION,
 };
