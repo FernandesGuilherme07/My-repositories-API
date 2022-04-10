@@ -1,6 +1,6 @@
 import User from '../models/User';
 
-import createPasswordHash from '../utils/bcrypt';
+import { createPasswordHash } from '../utils/bcrypt';
 
 class UsersController {
   async index(req, res) {
@@ -43,7 +43,7 @@ class UsersController {
 
       const newUser = await User.create({ email, password: encryptedPassword });
 
-      return res.status(200).json(newUser);
+      return res.status(201).json(newUser);
     } catch (error) {
       console.error(error);
       return res.status(500).json({ error: 'Internal server error.' });
