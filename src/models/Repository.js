@@ -7,7 +7,7 @@ const repositorySchema = new mongoose.Schema(
       required: true,
     },
     url: {
-      type: URL,
+      type: String,
       required: true,
       index: {
         unique: true,
